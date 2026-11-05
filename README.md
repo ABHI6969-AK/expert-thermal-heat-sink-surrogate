@@ -8,14 +8,15 @@ The grid contains 19,375 combinations across TDP from 30 W to 250 W, air velocit
 
 The model uses the assessment geometry, aluminum conductivity, TIM thickness, and air property values. Ambient temperature is set to 40 °C. Air properties remain fixed at the supplied 25 °C values. See `summary_report.md` for assumptions, evaluation results, sensitivity findings, and limitations.
 
-## Files
+## Dataset files
 
-`thermal_assessment.py` contains the physics model, parameter sweep, Ridge and distance weighted KNN surrogates, evaluation, and analysis.
+- [`thermal_dataset_preview.csv`](thermal_dataset_preview.csv) is a 216-row representative sample that GitHub can render as an interactive table.
+- [`thermal_dataset.csv`](thermal_dataset.csv) is the complete 19,375-row dataset. It is larger than GitHub's 512 KB interactive CSV-rendering limit, so GitHub shows it as raw text. Download it to inspect the complete data.
 
-`thermal_assessment.ipynb` runs the same workflow interactively.
+## Other files
 
-`thermal_dataset.csv` contains the generated cases and physics model outputs.
-
-`model_metrics.csv`, `correlation_analysis.csv`, and `sensitivity_analysis.csv` contain the evaluation and analysis tables.
-
-`results.json` stores configuration and reference case values. `summary_report.md` presents the technical summary.
+- `thermal_assessment.py` contains the physics model, parameter sweep, Ridge and distance-weighted KNN surrogates, evaluation, and analysis.
+- `thermal_assessment.ipynb` runs the same workflow interactively.
+- `model_metrics.csv`, `correlation_analysis.csv`, and `sensitivity_analysis.csv` contain the evaluation and analysis tables.
+- `results.json` stores configuration and reference case values.
+- `summary_report.md` presents the technical summary.
