@@ -1,0 +1,122 @@
+{
+  "dataset_rows": 19375,
+  "ambient_C": 40.0,
+  "input_ranges": {
+    "TDP_W": [
+      30.0,
+      250.0
+    ],
+    "air_velocity_m_s": [
+      0.5,
+      15.0
+    ],
+    "k_tim_W_mK": [
+      1.0,
+      12.0
+    ]
+  },
+  "config": {
+    "die_length_m": 0.0525,
+    "die_width_m": 0.045,
+    "sink_length_m": 0.09,
+    "sink_width_m": 0.116,
+    "sink_height_m": 0.027,
+    "fin_thickness_m": 0.0008,
+    "fin_count": 60,
+    "base_thickness_m": 0.0025,
+    "aluminum_conductivity_W_mK": 167.0,
+    "tim_thickness_m": 0.0001,
+    "junction_to_case_C_per_W": 0.2,
+    "ambient_C": 40.0,
+    "air_conductivity_W_mK": 0.0262,
+    "air_kinematic_viscosity_m2_s": 1.57e-05,
+    "air_prandtl": 0.71,
+    "reynolds_transition": 2300.0
+  },
+  "split": {
+    "method": "Hold out complete air-velocity levels",
+    "train_rows": 15000,
+    "test_rows": 4375,
+    "train_velocity_levels_m_s": [
+      0.5,
+      0.9833333333333334,
+      1.4666666666666668,
+      1.95,
+      2.4333333333333336,
+      2.9166666666666665,
+      3.4,
+      3.8833333333333333,
+      4.366666666666667,
+      4.85,
+      5.333333333333333,
+      5.816666666666666,
+      6.3,
+      6.783333333333333,
+      7.266666666666667,
+      8.233333333333334,
+      8.716666666666667,
+      9.2,
+      10.166666666666666,
+      10.65,
+      11.133333333333333,
+      11.616666666666667,
+      12.1,
+      13.55
+    ],
+    "test_velocity_levels_m_s": [
+      7.75,
+      9.683333333333334,
+      12.583333333333334,
+      13.066666666666666,
+      14.033333333333333,
+      14.516666666666667,
+      15.0
+    ],
+    "random_seed": 20261105
+  },
+  "maximum_reynolds_number": 1101.1551333261364,
+  "turbulent_branch_used": false,
+  "reference_case_150W_1m_s_4W_mK": {
+    "Re": 73.41034222174244,
+    "Nu": 2.048014084892021,
+    "h_W_m2K": 23.278089503132986,
+    "fin_spacing_m": 0.001152542372881356,
+    "fin_efficiency": 0.933162297962157,
+    "effective_area_m2": 0.2570660051679833,
+    "R_conv_C_per_W": 0.16711214652542283,
+    "R_TIM_C_per_W": 0.010582010582010583,
+    "R_cond_C_per_W": 0.006336533282641068,
+    "R_total_C_per_W": 0.3840306903900745,
+    "T_junction_C": 97.60460355851117
+  },
+  "metrics": [
+    {
+      "model": "Physics-feature Ridge",
+      "target": "R_total_C_per_W",
+      "MAE": 8.141368270920474e-07,
+      "RMSE": 9.489304598345884e-07,
+      "R2": 0.9999999918221152
+    },
+    {
+      "model": "Physics-feature Ridge",
+      "target": "T_junction_C",
+      "MAE": 0.0002759782804061274,
+      "RMSE": 0.0003668297158678302,
+      "R2": 0.9999999996496307
+    },
+    {
+      "model": "Distance-weighted KNN (k=12)",
+      "target": "R_total_C_per_W",
+      "MAE": 0.0011706828843856861,
+      "RMSE": 0.0017942648946785834,
+      "R2": 0.9707621565080323
+    },
+    {
+      "model": "Distance-weighted KNN (k=12)",
+      "target": "T_junction_C",
+      "MAE": 0.3626449978932311,
+      "RMSE": 0.5640590535233244,
+      "R2": 0.9991715884460965
+    }
+  ]
+}

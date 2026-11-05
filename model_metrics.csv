@@ -1,0 +1,5 @@
+model,target,MAE,RMSE,R2
+Physics-feature Ridge,R_total_C_per_W,8.141368271e-07,9.489304598e-07,0.9999999918
+Physics-feature Ridge,T_junction_C,0.0002759782804,0.0003668297159,0.9999999996
+Distance-weighted KNN (k=12),R_total_C_per_W,0.001170682884,0.001794264895,0.9707621565
+Distance-weighted KNN (k=12),T_junction_C,0.3626449979,0.5640590535,0.9991715884

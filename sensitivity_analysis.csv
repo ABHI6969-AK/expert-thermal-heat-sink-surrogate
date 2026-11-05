@@ -1,0 +1,7 @@
+target,varied_input,low_value,high_value,signed_output_change,absolute_output_change,rank_by_absolute_change
+R_total_C_per_W,air_velocity_m_s,0.5,15,-0.1337358892,0.1337358892,1
+R_total_C_per_W,k_tim_W_mK,1,12,-0.03880070547,0.03880070547,2
+R_total_C_per_W,TDP_W,30,250,0,0,3
+T_junction_C,TDP_W,30,250,66.55688336,66.55688336,1
+T_junction_C,air_velocity_m_s,0.5,15,-18.72302448,18.72302448,2
+T_junction_C,k_tim_W_mK,1,12,-5.432098765,5.432098765,3

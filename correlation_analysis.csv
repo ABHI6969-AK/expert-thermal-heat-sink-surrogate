@@ -1,0 +1,7 @@
+input,target,pearson_r,spearman_r
+TDP_W,R_total_C_per_W,-1.10016982e-17,0
+TDP_W,T_junction_C,0.9743218846,0.9815072464
+air_velocity_m_s,R_total_C_per_W,-0.8090159678,-0.8977391034
+air_velocity_m_s,T_junction_C,-0.1647201383,-0.146778454
+k_tim_W_mK,R_total_C_per_W,-0.2294359866,-0.330991068
+k_tim_W_mK,T_junction_C,-0.04671443946,-0.04392877799
